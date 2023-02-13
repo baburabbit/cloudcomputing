@@ -5,8 +5,12 @@ sudo addgroup hadoop
 sudo adduser --ingroup hadoop hduser
 sudo adduser hduser sudo
 sudo apt-get install ssh
-ssh-keygen
+ssh-keygen-t rsa-P""
+cat $HOME/.ssh/id_rsa.pub>> $HOME/.ssh/authorized_keys
 */home/hduser/.ssh/id_rsa
 *give enter
 *give enter
 ssh localhost
+sudo mkdir -p/user/local/hadoop
+sudo mv hadoop-2.7.2/user/local/hadoop
+sudo chown -R hduser:hadoop/user/local/hadoop
